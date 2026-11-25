@@ -173,7 +173,7 @@ scenario(
         offer("saa-economy", "saa", "ECONOMY", 7980),
         offer("saa-business", "saa", "BUSINESS", 42000),
     ])],
-    expected("BOOK", ["saa-economy"], ["ECONOMY"], ["LOWEST_FARE"], STAFF_EXEMPT_BOOK, ECONOMY),
+    expected("BOOK", ["saa-economy"], ["ECONOMY"], ["COST_SAVINGS", "LOWEST_FARE"], STAFF_EXEMPT_BOOK, ECONOMY),
     [DIRECT, CRITERIA],
     "A 650-minute overnight flight would allow the business exemption the DG signed, but the traveller asks for "
     "economy: economy is the default (line 156) and permission is not obligation. The cheaper Lufthansa economy fare "
@@ -182,8 +182,8 @@ scenario(
 
 scenario(
     "birch-lagoon", "easy", ["dearer_option"],
-    "Please book me business class Nairobi to Amsterdam on February 7th, the late-evening departure, for the donor coordination "
-    "meeting. The DG has approved my exemption for business.",
+    "Please book me business class Nairobi to Amsterdam on February 7th, on one of the late-evening departures, for "
+    "the donor coordination meeting. The DG has approved my exemption for business.",
     trip(traveller_name="Wanjiru Kamau", traveller_title="Manager, Bilateral Support", based_in="Nairobi, Kenya",
          origin="NBO", destination="AMS", travel_date="2027-02-07", booking_date="2027-01-11",
          purpose="Donor coordination meeting in Amsterdam", engagement_starts="2027-02-09 10:00",
@@ -250,8 +250,8 @@ scenario(
 
 scenario(
     "ember-kestrel", "easy", ["dearer_option"],
-    "Premium economy please from Delhi to Amsterdam on February 3rd, the early-morning departure, for the SAI leadership "
-    "programme meeting. The DG approved premium economy for me.",
+    "Premium economy please from Delhi to Amsterdam on February 3rd, on one of the early-morning departures, for the "
+    "SAI leadership programme meeting. The DG approved premium economy for me.",
     trip(traveller_name="Arjun Mehra", traveller_title="Senior Manager, Strategic Support", based_in="New Delhi, India",
          origin="DEL", destination="AMS", travel_date="2027-02-03", booking_date="2027-01-08",
          purpose="SAI leadership programme meeting in Amsterdam", engagement_starts="2027-02-04 13:00",
@@ -500,8 +500,8 @@ scenario(
 
 scenario(
     "oriole-peak", "multi_rule", ["dearer_option"],
-    "Business class please from Bogota to Madrid on March 22nd, the evening flight, for the joint OLACEFS-EUROSAI "
-    "meeting. The DG signed my exemption. " + FALLBACK.format("meeting"),
+    "Business class please from Bogota to Madrid on March 22nd, on one of the evening flights, for the joint "
+    "OLACEFS-EUROSAI meeting. The DG signed my exemption. " + FALLBACK.format("meeting"),
     trip(traveller_name="Camila Restrepo", traveller_title="Senior Manager, Regional Cooperation",
          based_in="Bogota, Colombia", origin="BOG", destination="MAD", travel_date="2027-03-22",
          booking_date="2027-02-24", purpose="Joint OLACEFS-EUROSAI meeting in Madrid",

@@ -318,7 +318,10 @@ def economy(trip, seated):
                       "Line 155: commercial air travel shall be the most direct and economical route available. The "
                       "connection the traveller asks for is dearer and takes longer; the lounge of line 169 is an "
                       "entitlement on a long stopover, not a ground to choose one. Book the cheapest economy fare.")
-    return answer(Decision.BOOK, lowest, [ReasonCode.LOWEST_FARE], on_file(trip), ECONOMY_CLAUSES,
+    # A traveller who sets aside a signed exemption to save money states the cost saving as the reason
+    # (validation w3, aspen-fjord; uk-dbt cobalt-weir and alder-pennant key the same pair).
+    saving = [ReasonCode.COST_SAVINGS] if exemptions(trip) else []
+    return answer(Decision.BOOK, lowest, [ReasonCode.LOWEST_FARE, *saving], on_file(trip), ECONOMY_CLAUSES,
                   "Lines 155-156: the most direct and economical route, in economy, the default class. The traveller "
                   "asks for economy, so no exemption is used even where one could be (permission is not obligation).")
 
