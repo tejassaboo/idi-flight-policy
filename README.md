@@ -1,5 +1,7 @@
 # IDI Travel Policy Flight Booking
 
+**Source of the handbook:** https://idi.no/wp-content/uploads/2024/10/2025-IDI-Travel-Policy.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the INTOSAI Development Initiative (IDI).** The handbook is the IDI's *IDI Travel Policy*
 (2025 edition, effective 1 December 2025), a published nonprofit policy (the text names
 https://www.idi.no/our-resources/idi-administrative; the source URL of the pinned PDF was not recorded and is
