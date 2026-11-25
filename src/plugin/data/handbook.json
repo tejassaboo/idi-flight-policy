@@ -8,7 +8,7 @@
   "raw_pdf_sha256": "a0360242bc219fff20ffdecdc58e89e5a5806bfd96dd8e905e3d6649ab381e30",
   "words": 3290,
   "lines": 303,
-  "source": "not recorded locally (UNVERIFIED); the text names https://www.idi.no/our-resources/idi-administrative; the raw PDF pilot_work/originals/idi/raw_idi.pdf is the pinned copy",
+  "source": "https://idi.no/wp-content/uploads/2024/10/2025-IDI-Travel-Policy.pdf; byte-identical to the pinned raw PDF (sha256 checked 2026-11-25); the text names https://www.idi.no/our-resources/idi-administrative",
   "frozen_on": "2026-11-24",
   "scenario_count": 24,
   "currency": "NOK",
