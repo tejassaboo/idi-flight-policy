@@ -1,0 +1,155 @@
+{
+  "id": "yarrow-spit",
+  "category": "flag",
+  "overlays": [
+    "approval_required",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "fennel-quay",
+    "garnet-brook"
+  ],
+  "ambiguity_note": "none: an approval is required and missing; the text is clear",
+  "request": "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th; I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the workshop.",
+  "trip": {
+    "traveller_name": "Samuel Kiprono",
+    "traveller_title": "Manager, Bilateral Support",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "BOM",
+    "travel_date": "2027-03-07",
+    "booking_date": "2027-02-10",
+    "purpose": "Cooperative audit workshop hosted by the SAI of India in Mumbai",
+    "purpose_kind": "WORKSHOP",
+    "engagement_starts": "2027-03-09 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": true,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "BOM",
+        "date": "2027-03-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "22:30",
+            "minutes": [
+              361
+            ]
+          },
+          "airindia": {
+            "carrier": "AI",
+            "depart": "23:15",
+            "minutes": [
+              355
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 430000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 2150000
+          },
+          {
+            "slot": "airindia-economy",
+            "flight": "airindia",
+            "cabin": "ECONOMY",
+            "fare_cents": 465000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "DIRECTOR_GENERAL"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    },
+    {
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "efd6bc5bdeb06154d656fab8395b617c89a142182ef200082151764667b7f288",
+      "quote": "17. Night: In this policy, night means the period between 22:00 and 06:00.",
+      "why": "night is the period between 22:00 and 06:00"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The Kenya Airways nonstop is 361 minutes, over 6 hours, and overnight on both clocks: an exemption may be considered (lines 159-161), but only the DG may authorise it for staff (lines 135-136, 165), and the application is still pending. Hold the business fare for the DG; approval required, not 'no compliant offer'. Same flights as fennel-quay (signed) and one minute longer than garnet-brook (pending, 360 minutes: economy)."
+}

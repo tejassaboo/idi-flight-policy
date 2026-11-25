@@ -1,0 +1,146 @@
+{
+  "id": "maple-tarn",
+  "category": "multi_rule",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm flying Johannesburg to London on January 16th for the two-week public sector audit methodology course that starts on the 18th. It's a long flight, so business please; I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the course.",
+  "trip": {
+    "traveller_name": "Sipho Ndlovu",
+    "traveller_title": "Senior Manager, Professional SAIs",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Johannesburg, South Africa",
+    "origin": "JNB",
+    "destination": "LHR",
+    "travel_date": "2027-01-16",
+    "booking_date": "2026-12-17",
+    "purpose": "Two-week course in public sector audit methodology in London",
+    "purpose_kind": "COURSE",
+    "engagement_starts": "2027-01-18 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": true,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "JNB",
+        "destination": "LHR",
+        "date": "2027-01-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "20:30",
+            "minutes": [
+              680
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "19:45",
+            "minutes": [
+              685
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 810000
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 4020000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 770000
+          },
+          {
+            "slot": "saa-business",
+            "flight": "saa",
+            "cabin": "BUSINESS",
+            "fare_cents": 3890000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "saa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "COURSE_TRAVEL_ECONOMY",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        176,
+        176
+      ],
+      "sha256": "1c9d7d7cd00dd7daa3033f344c72f20254ca1cefad5f255d6066d9b58017e7f1",
+      "quote": "33. Travel for courses and studies should always be on economy class ticket.",
+      "why": "courses and studies always in economy"
+    },
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        296,
+        297
+      ],
+      "quote": "not in connection with courses, seminars or conferences unless the employee has specific assignments",
+      "why": "a pay rule for coordinators; it does not set the cabin"
+    }
+  ],
+  "design_notes": "The overnight 680-minute flight would meet the exemption criteria of lines 159-161, but line 176 says travel for courses and studies should always be on an economy ticket, so there is nothing to hold for: book the cheapest economy fare (South African Airways)."
+}

@@ -1,0 +1,155 @@
+{
+  "id": "saffron-isle",
+  "category": "distractor",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Cairo to Copenhagen on June 7th for the SAI performance measurement meeting the next morning. Please book the Turkish Airlines connection through Istanbul: it has a long stop, and staff get lounge access on stops like that. If the policy wants a different flight, book that; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Nadia Hassan",
+    "traveller_title": "Manager, Performance Measurement",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Cairo, Egypt",
+    "origin": "CAI",
+    "destination": "CPH",
+    "travel_date": "2027-06-07",
+    "booking_date": "2027-05-17",
+    "purpose": "SAI performance measurement meeting in Copenhagen",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-06-08 09:00",
+    "requested_cabin": "ECONOMY",
+    "requested_connection": "IST",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "CAI",
+        "destination": "CPH",
+        "date": "2027-06-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "turkish": {
+            "carrier": "TK",
+            "via": [
+              "IST"
+            ],
+            "depart": "08:00",
+            "minutes": [
+              125,
+              170
+            ],
+            "layovers": [
+              230
+            ]
+          },
+          "lufthansa": {
+            "carrier": "LH",
+            "via": [
+              "FRA"
+            ],
+            "depart": "08:30",
+            "minutes": [
+              240,
+              80
+            ],
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "turkish-economy",
+            "flight": "turkish",
+            "cabin": "ECONOMY",
+            "fare_cents": 445000
+          },
+          {
+            "slot": "lufthansa-economy",
+            "flight": "lufthansa",
+            "cabin": "ECONOMY",
+            "fare_cents": 410000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "lufthansa-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_TOO_EXPENSIVE",
+      "CONNECTION_TOO_LONG",
+      "COST_SAVINGS",
+      "DIRECT_ECONOMICAL_ROUTE",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "GENERAL_CONDITIONS",
+      "GUIDING_PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        155,
+        155
+      ],
+      "sha256": "c3e274c86e757b20888c5632bcdfbec8aec088307a43615b007534f7d6e9be26",
+      "quote": "26. Commercial air travel by IDI staff shall be the most direct and economical route available.",
+      "why": "the most direct and economical route"
+    },
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "e48fc9213dd253732050323c8c2837958b8cce056e27b50611f1d6dd27c11c55",
+      "quote": "The journey shall be made in the speediest, safest and most reasonable/economical manner for the IDI",
+      "why": "the journey is made in the most reasonable/economical manner"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        169,
+        169
+      ],
+      "quote": "IDI staff are entitled to a lounge if the stopover is longer than three hours.",
+      "why": "a lounge entitlement on a long stopover; it does not choose the route"
+    }
+  ],
+  "design_notes": "Line 155: the most direct and economical route. Both itineraries connect once; the Frankfurt one is cheaper (NOK 4,100 against 4,450) and quicker (390 against 525 minutes), so it is both the more direct and the more economical. The lounge of line 169 is an entitlement on a stopover over three hours, not a reason to choose a routing. Both land the afternoon before the meeting."
+}

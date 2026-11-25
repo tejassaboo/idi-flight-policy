@@ -1,0 +1,13 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "One flight request, a real development organisation's travel policy: book it, refuse it, or hold it for sign-off"
+summary: "An agent handles one traveller's flight request under the INTOSAI Development Initiative's IDI Travel Policy (2025 edition), read verbatim. It reads the trip record, searches a simulated flight world (real airports and airlines, synthetic schedules and fares in Norwegian kroner) and submits a decision with the offer, cabin, reason, approver and policy section. A deterministic verifier rebuilds the offers and the policy's answer itself and checks every field. Twenty-four cases cover the premium-cabin exemption criteria on both sides of each limit (a leg over six hours, a journey over nine, overnight flights), who may sign an exemption, courses, leave before an event, a certified medical need, next of kin, a weekend away, and the policy's own unclear words."
+highlights:
+  - "The verbatim policy: no paraphrase, no rules restated in the task"
+  - "Exact boundaries: 361 against 360 scheduled minutes, 540 minutes door to door, day against night departures"
+  - "Unclear clauses become holds for approval, each once, with clear twins on both sides"
+  - "Fully offline: a hash-seeded flight world with unguessable offer ids"
+steps:
+  - "Name a case, for example aspen-fjord, with the traveller's request"
+  - "The agent reads the trip record and searches flights on the trip's route and date"
+  - "It submits BOOK, REFUSE or FLAG_FOR_APPROVAL with the offer, cabin, reason, approver and section"
+  - "The verifier recomputes the policy's answer and checks every field"

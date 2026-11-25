@@ -1,0 +1,209 @@
+{
+  "id": "larch-mere",
+  "category": "multi_rule",
+  "overlays": [
+    "personal_travel",
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The DG approved business class for my Johannesburg to Amsterdam flight to the March 5th meeting. I've since decided to take a week of annual leave in Amsterdam before it, so please book me out on February 26th instead of March 4th, business as approved. If the policy rules business out for this flight, book what it allows; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Lerato Dlamini",
+    "traveller_title": "Manager, Women Leadership Academy",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Johannesburg, South Africa",
+    "origin": "JNB",
+    "destination": "AMS",
+    "travel_date": "2027-02-26",
+    "booking_date": "2027-02-01",
+    "purpose": "Programme steering meeting in Amsterdam, with a week of annual leave in Amsterdam before it",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-03-05 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "BEFORE_EVENT",
+    "usual_travel_date": "2027-03-04",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "JNB",
+        "destination": "AMS",
+        "date": "2027-02-26",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "21:00",
+            "minutes": [
+              675
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "20:00",
+            "minutes": [
+              680
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 820000
+          },
+          {
+            "slot": "klm-business",
+            "flight": "klm",
+            "cabin": "BUSINESS",
+            "fare_cents": 4150000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 860000
+          },
+          {
+            "slot": "saa-business",
+            "flight": "saa",
+            "cabin": "BUSINESS",
+            "fare_cents": 4400000
+          }
+        ]
+      },
+      {
+        "name": "usual",
+        "origin": "JNB",
+        "destination": "AMS",
+        "date": "2027-03-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "21:00",
+            "minutes": [
+              675
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "20:00",
+            "minutes": [
+              680
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "usual-klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 890000
+          },
+          {
+            "slot": "usual-klm-business",
+            "flight": "klm",
+            "cabin": "BUSINESS",
+            "fare_cents": 4300000
+          },
+          {
+            "slot": "usual-saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 910000
+          },
+          {
+            "slot": "usual-saa-business",
+            "flight": "saa",
+            "cabin": "BUSINESS",
+            "fare_cents": 4550000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "klm-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "PERSONAL_TRAVEL_NOT_COVERED",
+      "UPGRADE_NOT_ELIGIBLE",
+      "VACATION_SEGMENT_ECONOMY"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "ACCOMMODATION_MEALS",
+      "PERSONAL_TRAVEL_VACATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        240,
+        242
+      ],
+      "sha256": "aacfc759b56ba20228f26f5253f93d7d6cc05c22b10dc4df68cfbdb44dd5d7b4",
+      "quote": "50. If a staff takes vacation prior to or immediately after an event the employee must travel economy class for that segment of the journey and the price of the ticket must not exceed the amount had the employee not had the holiday prior to or after the event. Additional amount if any, has to be borne by the employee.",
+      "why": "vacation just before or after an event: economy for that segment, capped at the ticket without the holiday"
+    },
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The flight itself meets the criteria (675 minutes overnight) and the DG's business exemption is on file, but the traveller now takes vacation just before the event: lines 240-242 say the employee must travel economy for that segment, at a price not over the ticket without the holiday. The cheapest economy fare on the 26th (KLM, NOK 8,200) is below even the March 4th economy fare (NOK 8,900), let alone the business fare, so it is within the cap on any reading. The leave runs across the end of February. The record names the usual date, so its search is pinned."
+}

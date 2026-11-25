@@ -1,0 +1,171 @@
+{
+  "id": "ember-kestrel",
+  "category": "easy",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Premium economy please from Delhi to Amsterdam on February 3rd, the early-morning departure, for the SAI leadership programme meeting. The DG approved premium economy for me.",
+  "trip": {
+    "traveller_name": "Arjun Mehra",
+    "traveller_title": "Senior Manager, Strategic Support",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "New Delhi, India",
+    "origin": "DEL",
+    "destination": "AMS",
+    "travel_date": "2027-02-03",
+    "booking_date": "2027-01-08",
+    "purpose": "SAI leadership programme meeting in Amsterdam",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-02-04 13:00",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "PREMIUM_ECONOMY"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DEL",
+        "destination": "AMS",
+        "date": "2027-02-03",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "01:00",
+            "minutes": [
+              485
+            ]
+          },
+          "airindia": {
+            "carrier": "AI",
+            "depart": "01:40",
+            "minutes": [
+              485
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 590000
+          },
+          {
+            "slot": "klm-premium",
+            "flight": "klm",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 980000
+          },
+          {
+            "slot": "klm-business",
+            "flight": "klm",
+            "cabin": "BUSINESS",
+            "fare_cents": 3050000
+          },
+          {
+            "slot": "airindia-economy",
+            "flight": "airindia",
+            "cabin": "ECONOMY",
+            "fare_cents": 540000
+          },
+          {
+            "slot": "airindia-premium",
+            "flight": "airindia",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 920000
+          },
+          {
+            "slot": "airindia-business",
+            "flight": "airindia",
+            "cabin": "BUSINESS",
+            "fare_cents": 2890000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "airindia-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "CABIN_EXEMPTION_AUTHORIZED",
+      "INTERNATIONAL_LONG_FLIGHT",
+      "LONG_FLIGHT_APPROVED",
+      "PREMIUM_ECONOMY_ALLOWED"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "485-minute nonstops leaving at 01:00 and 01:40: a leg over 6 hours, overnight, so the DG's exemption for premium economy applies (lines 156-161, 165). The cheapest premium economy fare: Air India."
+}

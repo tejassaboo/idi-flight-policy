@@ -1,0 +1,140 @@
+{
+  "id": "dune-sorrel",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Book me economy from Delhi to Frankfurt, leaving just after midnight on January 20th, for the audit methodology workshop that starts on the 21st.",
+  "trip": {
+    "traveller_name": "Priya Natarajan",
+    "traveller_title": "Manager, Relevant SAIs",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "New Delhi, India",
+    "origin": "DEL",
+    "destination": "FRA",
+    "travel_date": "2027-01-20",
+    "booking_date": "2026-12-28",
+    "purpose": "Audit methodology workshop in Frankfurt",
+    "purpose_kind": "WORKSHOP",
+    "engagement_starts": "2027-01-21 09:00",
+    "requested_cabin": "ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DEL",
+        "destination": "FRA",
+        "date": "2027-01-20",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lufthansa": {
+            "carrier": "LH",
+            "depart": "00:30",
+            "minutes": [
+              465
+            ]
+          },
+          "airindia": {
+            "carrier": "AI",
+            "depart": "01:15",
+            "minutes": [
+              470
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "lufthansa-economy",
+            "flight": "lufthansa",
+            "cabin": "ECONOMY",
+            "fare_cents": 560000
+          },
+          {
+            "slot": "lufthansa-business",
+            "flight": "lufthansa",
+            "cabin": "BUSINESS",
+            "fare_cents": 2980000
+          },
+          {
+            "slot": "airindia-economy",
+            "flight": "airindia",
+            "cabin": "ECONOMY",
+            "fare_cents": 525000
+          },
+          {
+            "slot": "airindia-business",
+            "flight": "airindia",
+            "cabin": "BUSINESS",
+            "fare_cents": 2740000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "airindia-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "GENERAL_CONDITIONS",
+      "GUIDING_PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        155,
+        155
+      ],
+      "sha256": "c3e274c86e757b20888c5632bcdfbec8aec088307a43615b007534f7d6e9be26",
+      "quote": "26. Commercial air travel by IDI staff shall be the most direct and economical route available.",
+      "why": "the most direct and economical route"
+    },
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The overnight flights are long enough for an exemption to be considered, but the traveller asks for economy and none is sought: economy, the default, at the lowest fare (Air India)."
+}

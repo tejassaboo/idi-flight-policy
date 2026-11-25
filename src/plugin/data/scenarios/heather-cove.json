@@ -1,0 +1,156 @@
+{
+  "id": "heather-cove",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "iris-shoal",
+  "twin_fact": "Qatar Airways leaves Delhi 20:30 (Doha-Copenhagen overnight) or 09:00 (all daytime); the DG's exemption is signed here and pending in the twin",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways evening departure via Doha. Business please, the DG has signed my exemption. If the policy rules business out for this flight, book what it allows; I have to be at the conference.",
+  "trip": {
+    "traveller_name": "Rohan Kapoor",
+    "traveller_title": "Senior Manager, SAI Governance",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "New Delhi, India",
+    "origin": "DEL",
+    "destination": "CPH",
+    "travel_date": "2027-04-11",
+    "booking_date": "2027-03-15",
+    "purpose": "Nordic SAI partnership conference in Copenhagen",
+    "purpose_kind": "CONFERENCE",
+    "engagement_starts": "2027-04-13 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DEL",
+        "destination": "CPH",
+        "date": "2027-04-11",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "qatar": {
+            "carrier": "QR",
+            "via": [
+              "DOH"
+            ],
+            "depart": "20:30",
+            "minutes": [
+              210,
+              360
+            ],
+            "layovers": [
+              75
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "qatar-economy",
+            "flight": "qatar",
+            "cabin": "ECONOMY",
+            "fare_cents": 610000
+          },
+          {
+            "slot": "qatar-business",
+            "flight": "qatar",
+            "cabin": "BUSINESS",
+            "fare_cents": 3380000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "qatar-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "CABIN_EXEMPTION_AUTHORIZED",
+      "INTERNATIONAL_LONG_FLIGHT",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    },
+    {
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "efd6bc5bdeb06154d656fab8395b617c89a142182ef200082151764667b7f288",
+      "quote": "17. Night: In this policy, night means the period between 22:00 and 06:00.",
+      "why": "night is the period between 22:00 and 06:00"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "No leg is over 6 hours (210 and 360 minutes), but the flights alone add to 570 minutes, so the total journey is over 9 hours on any reading, and the Doha-Copenhagen flight leaves 22:45 and flies through the night on both clocks. Both groupings of lines 159-161 hold, and the DG's exemption is on file: Qatar business."
+}

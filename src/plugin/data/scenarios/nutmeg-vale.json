@@ -1,0 +1,157 @@
+{
+  "id": "nutmeg-vale",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Since my spine surgery my doctor has certified that I can't sit upright in a standard seat for long. The DG has approved business class for me on that basis. Please book business Nairobi to Johannesburg on the morning of March 15th for the regional audit workshop.",
+  "trip": {
+    "traveller_name": "Esther Wambui",
+    "traveller_title": "Manager, Audit Quality",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2027-03-15",
+    "booking_date": "2027-02-19",
+    "purpose": "Regional audit workshop in Johannesburg",
+    "purpose_kind": "WORKSHOP",
+    "engagement_starts": "2027-03-16 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": true,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2027-03-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "08:00",
+            "minutes": [
+              240
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "10:30",
+            "minutes": [
+              245
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 340000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 1480000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 360000
+          },
+          {
+            "slot": "saa-business",
+            "flight": "saa",
+            "cabin": "BUSINESS",
+            "fare_cents": 1590000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "CABIN_EXEMPTION_AUTHORIZED",
+      "MEDICAL_NEED"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        164,
+        164
+      ],
+      "sha256": "340e787a7b3d85067cc2b50c6d4cf468d661c42fcf502a36e9a1c817e892c0ac",
+      "quote": "28. Exemptions may also be made for duly certified medical reasons.",
+      "why": "an exemption may also be made for duly certified medical reasons"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    },
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A 240-minute daytime flight fails the duration and overnight criteria, but line 164 lets exemptions also be made for duly certified medical reasons; the certificate and the DG's exemption are on file. The cheapest business fare, Kenya Airways."
+}

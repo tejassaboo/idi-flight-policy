@@ -1,0 +1,136 @@
+{
+  "id": "iris-shoal",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "heather-cove",
+  "twin_fact": "Qatar Airways leaves Delhi 09:00 (all daytime) or 20:30 (overnight); the DG's exemption is pending here and signed in the twin",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways morning departure via Doha. Business please, I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the conference.",
+  "trip": {
+    "traveller_name": "Meera Iyer",
+    "traveller_title": "Senior Manager, SAI Governance",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "New Delhi, India",
+    "origin": "DEL",
+    "destination": "CPH",
+    "travel_date": "2027-04-11",
+    "booking_date": "2027-03-15",
+    "purpose": "Nordic SAI partnership conference in Copenhagen",
+    "purpose_kind": "CONFERENCE",
+    "engagement_starts": "2027-04-13 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": true,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DEL",
+        "destination": "CPH",
+        "date": "2027-04-11",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "qatar": {
+            "carrier": "QR",
+            "via": [
+              "DOH"
+            ],
+            "depart": "09:00",
+            "minutes": [
+              210,
+              360
+            ],
+            "layovers": [
+              75
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "qatar-economy",
+            "flight": "qatar",
+            "cabin": "ECONOMY",
+            "fare_cents": 610000
+          },
+          {
+            "slot": "qatar-business",
+            "flight": "qatar",
+            "cabin": "BUSINESS",
+            "fare_cents": 3380000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "qatar-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "efd6bc5bdeb06154d656fab8395b617c89a142182ef200082151764667b7f288",
+      "quote": "17. Night: In this policy, night means the period between 22:00 and 06:00.",
+      "why": "night is the period between 22:00 and 06:00"
+    },
+    {
+      "lines": [
+        155,
+        155
+      ],
+      "sha256": "c3e274c86e757b20888c5632bcdfbec8aec088307a43615b007534f7d6e9be26",
+      "quote": "26. Commercial air travel by IDI staff shall be the most direct and economical route available.",
+      "why": "the most direct and economical route"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The same 570 flying minutes, but leaving Delhi 09:00 and landing in Copenhagen 15:15, both flights outside 22:00-06:00 on every clock. No leg is over 6 hours, so neither grouping of lines 159-161 is met without an overnight flight: no exemption can be considered, the pending one included. Economy, Qatar."
+}

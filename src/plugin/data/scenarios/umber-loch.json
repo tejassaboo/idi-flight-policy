@@ -1,0 +1,125 @@
+{
+  "id": "umber-loch",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "quartz-heath",
+  "twin_fact": "the staff member is simply at the workshop, or in hospital after an accident on IDI travel (with her ADG's authorisation)",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My wife, Achieng Otieno, is in Johannesburg for an IDI workshop this week, and I'd like to join her there. Please book me economy Nairobi to Johannesburg tomorrow, March 9th.",
+  "trip": {
+    "traveller_name": "Daniel Otieno",
+    "traveller_title": "Husband of Achieng Otieno, Manager, Audit Quality",
+    "passenger": "FAMILY_MEMBER",
+    "goes_to": "Achieng Otieno",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2027-03-09",
+    "booking_date": "2027-03-08",
+    "purpose": "To join his wife at her IDI workshop in Johannesburg",
+    "purpose_kind": "FAMILY",
+    "engagement_starts": "",
+    "requested_cabin": "ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2027-03-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "08:00",
+            "minutes": [
+              240
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "10:30",
+            "minutes": [
+              245
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 340000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 1480000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 360000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "COMPANION_NOT_COVERED",
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "AREA_OF_APPLICATION",
+      "ILLNESS_ACCIDENT",
+      "SPECIAL_SITUATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        57,
+        58
+      ],
+      "sha256": "00bf44510ea9e9a0b1ddeac938c4d4a62bbda64a48d16f445d36a8ceb2f2322d",
+      "quote": "It applies only to IDI staff and Board members.",
+      "why": "the policy covers staff and Board members only"
+    },
+    {
+      "lines": [
+        251,
+        253
+      ],
+      "sha256": "9be494fe66a7725ee219c83c6716c188f89241dedfe03ee3e35ce015dd7fc4e9",
+      "quote": "53. When a staff becomes ill or injured while on official duty and is in need of the presence of next of kin, actual and reasonable transportation and accommodation plus the daily composite allowance may be reimbursed.",
+      "why": "next of kin's transportation when a staff member is ill or injured on official duty"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 57-58: the policy applies only to IDI staff and Board members. A family member's transportation is covered only when a staff member is ill or injured on duty and needs next of kin (lines 251-253); she is not. The IDI buys no ticket."
+}

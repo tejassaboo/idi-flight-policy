@@ -1,0 +1,127 @@
+{
+  "id": "tamarind-wold",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "date_arithmetic",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The Amsterdam workshop runs from Thursday April 15th to Tuesday April 20th with nothing on over the weekend. I'd like to spend Saturday and Sunday in Barcelona, so please book me Amsterdam to Barcelona on Saturday the 17th; I'll fly back for Monday.",
+  "trip": {
+    "traveller_name": "Kofi Mensah",
+    "traveller_title": "Manager, Bilateral Support",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Nairobi, Kenya",
+    "origin": "AMS",
+    "destination": "BCN",
+    "travel_date": "2027-04-17",
+    "booking_date": "2027-04-08",
+    "purpose": "A weekend in Barcelona during the break of the Amsterdam workshop (April 15-20)",
+    "purpose_kind": "PERSONAL",
+    "engagement_starts": "",
+    "requested_cabin": "ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "AMS",
+        "destination": "BCN",
+        "date": "2027-04-17",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "morning": {
+            "carrier": "KL",
+            "depart": "08:20",
+            "minutes": [
+              125
+            ]
+          },
+          "midday": {
+            "carrier": "KL",
+            "depart": "12:40",
+            "minutes": [
+              125
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "morning-economy",
+            "flight": "morning",
+            "cabin": "ECONOMY",
+            "fare_cents": 145000
+          },
+          {
+            "slot": "midday-economy",
+            "flight": "midday",
+            "cabin": "ECONOMY",
+            "fare_cents": 162000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "ACCOMMODATION_MEALS",
+      "PERSONAL_TRAVEL_VACATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        234,
+        239
+      ],
+      "sha256": "9a59dfeb7af1da239d8f99f3fdddfca7df99492602e4076b5fd942895c6a9366",
+      "quote": "49. Provided the staff is not required to remain at the duty location over a weekend for work related reasons and chooses to spend the weekend at another location of personal choice away from home, the staff shall be entitled only to the allowances or reimbursement of the actual cost authorised , had the employee remained at the duty location up to the completion of the official engagement and the availability of earliest convenient mode to travel back. Transportation and other costs related to a stay at another location of personal choice shall not be reimbursed.",
+      "why": "a weekend at another location of personal choice: its transportation is not reimbursed"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        114,
+        114
+      ],
+      "quote": "Day: In this policy, day means 24 hours calculated from the time the trip begins.",
+      "why": "a day of 24 hours for allowances, not a flight length"
+    }
+  ],
+  "design_notes": "Lines 234-239: the staff member is not required to stay in Amsterdam over the weekend and chooses another location of personal choice; transportation related to that stay shall not be reimbursed. The IDI buys no ticket. The ADG's travel authority for the workshop is on file but unused (NONE or the ADG)."
+}

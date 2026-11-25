@@ -1,0 +1,131 @@
+{
+  "id": "garnet-brook",
+  "category": "boundary_twin",
+  "overlays": [],
+  "twin_of": "fennel-quay",
+  "twin_fact": "Kenya Airways nonstop 360 or 361 minutes; the DG's exemption is pending here and signed in the twin",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th; I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the workshop.",
+  "trip": {
+    "traveller_name": "Grace Achieng",
+    "traveller_title": "Manager, Bilateral Support",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "BOM",
+    "travel_date": "2027-03-07",
+    "booking_date": "2027-02-10",
+    "purpose": "Cooperative audit workshop hosted by the SAI of India in Mumbai",
+    "purpose_kind": "WORKSHOP",
+    "engagement_starts": "2027-03-09 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": true,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "BOM",
+        "date": "2027-03-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "22:30",
+            "minutes": [
+              360
+            ]
+          },
+          "airindia": {
+            "carrier": "AI",
+            "depart": "23:15",
+            "minutes": [
+              355
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 430000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 2150000
+          },
+          {
+            "slot": "airindia-economy",
+            "flight": "airindia",
+            "cabin": "ECONOMY",
+            "fare_cents": 465000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        155,
+        155
+      ],
+      "sha256": "c3e274c86e757b20888c5632bcdfbec8aec088307a43615b007534f7d6e9be26",
+      "quote": "26. Commercial air travel by IDI staff shall be the most direct and economical route available.",
+      "why": "the most direct and economical route"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "At exactly 360 minutes no leg lasts more than 6 hours, and 360 minutes is no journey of more than 9 hours, so an exemption cannot be considered on any reading of lines 159-161, even though one is pending: there is nothing for the DG to decide, so no hold. Economy at the lowest fare, Kenya Airways."
+}

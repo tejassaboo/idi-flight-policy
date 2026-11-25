@@ -1,0 +1,170 @@
+{
+  "id": "violet-crag",
+  "category": "flag",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "birch-lagoon",
+    "iris-shoal"
+  ],
+  "ambiguity_note": {
+    "phrase": "and where travel involves overnight flights",
+    "readings": [
+      "the overnight condition governs both the leg and the journey test: a daytime flight never qualifies, so book economy",
+      "the overnight condition goes with the journey test only: a leg over 6 hours qualifies by day, so hold business for the DG's exemption"
+    ]
+  },
+  "request": "Johannesburg to Dubai on June 14th for the INTOSAI regional coordination meeting, on the Emirates morning flight. It's a long flight, so business please; I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Naledi Khumalo",
+    "traveller_title": "Senior Manager, Regional Cooperation",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Johannesburg, South Africa",
+    "origin": "JNB",
+    "destination": "DXB",
+    "travel_date": "2027-06-14",
+    "booking_date": "2027-05-18",
+    "purpose": "INTOSAI regional coordination meeting in Dubai",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-06-15 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": true,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "JNB",
+        "destination": "DXB",
+        "date": "2027-06-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "08:00",
+            "minutes": [
+              490
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "09:30",
+            "minutes": [
+              495
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-economy",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 630000
+          },
+          {
+            "slot": "emirates-business",
+            "flight": "emirates",
+            "cabin": "BUSINESS",
+            "fare_cents": 3020000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 670000
+          },
+          {
+            "slot": "saa-business",
+            "flight": "saa",
+            "cabin": "BUSINESS",
+            "fare_cents": 3250000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "emirates-business",
+      "emirates-economy"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DEPUTY_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": "and where travel involves overnight flights"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    },
+    {
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "efd6bc5bdeb06154d656fab8395b617c89a142182ef200082151764667b7f288",
+      "quote": "17. Night: In this policy, night means the period between 22:00 and 06:00.",
+      "why": "night is the period between 22:00 and 06:00"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A 490-minute daytime nonstop (08:00-18:10 Dubai time, no minute of it between 22:00 and 06:00). Lines 159-161: 'One leg ... more than 6 hours ... or the total journey lasts for more than 9 hours, and where travel involves overnight flights'. Read as (long leg or long journey) and overnight, no exemption can be considered: book economy. Read as long leg, or (long journey and overnight), the long leg qualifies and the pending exemption is the DG's to decide: hold business. Hold either offer."
+}

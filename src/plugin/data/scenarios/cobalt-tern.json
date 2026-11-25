@@ -1,0 +1,146 @@
+{
+  "id": "cobalt-tern",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Cairo to Amsterdam on March 16th for the peer review planning meeting. I'd like premium economy if the policy allows it for this flight; otherwise economy is fine. I have to be at the meeting the next morning.",
+  "trip": {
+    "traveller_name": "Omar Farouk",
+    "traveller_title": "Senior Manager, Well-Governed SAIs",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Cairo, Egypt",
+    "origin": "CAI",
+    "destination": "AMS",
+    "travel_date": "2027-03-16",
+    "booking_date": "2027-02-22",
+    "purpose": "Peer review planning meeting in Amsterdam",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-03-17 09:00",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Lars Eide",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "CAI",
+        "destination": "AMS",
+        "date": "2027-03-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "09:10",
+            "minutes": [
+              265
+            ]
+          },
+          "egyptair": {
+            "carrier": "MS",
+            "depart": "11:00",
+            "minutes": [
+              265
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 390000
+          },
+          {
+            "slot": "klm-premium",
+            "flight": "klm",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 620000
+          },
+          {
+            "slot": "egyptair-economy",
+            "flight": "egyptair",
+            "cabin": "ECONOMY",
+            "fare_cents": 365000
+          },
+          {
+            "slot": "egyptair-premium",
+            "flight": "egyptair",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 590000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "egyptair-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        155,
+        155
+      ],
+      "sha256": "c3e274c86e757b20888c5632bcdfbec8aec088307a43615b007534f7d6e9be26",
+      "quote": "26. Commercial air travel by IDI staff shall be the most direct and economical route available.",
+      "why": "the most direct and economical route"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        175,
+        175
+      ],
+      "quote": "Purchasing extra leg room may also be considered for long travels",
+      "why": "extra legroom is an add-on, not a cabin"
+    }
+  ],
+  "design_notes": "A 265-minute daytime flight: no leg over 6 hours, no journey over 9 hours, no night flight, so premium economy cannot be considered on any reading (lines 156-161). Economy at the lowest fare, EgyptAir."
+}

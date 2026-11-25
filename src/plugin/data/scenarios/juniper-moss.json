@@ -1,0 +1,156 @@
+{
+  "id": "juniper-moss",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "kelp-ridge",
+  "twin_fact": "the journey: 550 flying minutes (620 door to door) to Copenhagen, or 540 minutes door to door to Istanbul; the DG's exemption is signed here and pending in the twin",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Copenhagen on May 9th for the INTOSAI capacity building committee, on the EgyptAir evening connection through Cairo. Business please, the DG signed my exemption. If the policy rules business out for this flight, book what it allows; I have to be at the committee meeting.",
+  "trip": {
+    "traveller_name": "Peter Otieno",
+    "traveller_title": "Manager, Capacity Development",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "CPH",
+    "travel_date": "2027-05-09",
+    "booking_date": "2027-04-12",
+    "purpose": "INTOSAI capacity building committee in Copenhagen",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-05-10 13:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "CPH",
+        "date": "2027-05-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "egyptair": {
+            "carrier": "MS",
+            "via": [
+              "CAI"
+            ],
+            "depart": "20:00",
+            "minutes": [
+              285,
+              265
+            ],
+            "layovers": [
+              60
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "egyptair-economy",
+            "flight": "egyptair",
+            "cabin": "ECONOMY",
+            "fare_cents": 520000
+          },
+          {
+            "slot": "egyptair-business",
+            "flight": "egyptair",
+            "cabin": "BUSINESS",
+            "fare_cents": 2650000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "egyptair-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "CABIN_EXEMPTION_AUTHORIZED",
+      "INTERNATIONAL_LONG_FLIGHT",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    },
+    {
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "efd6bc5bdeb06154d656fab8395b617c89a142182ef200082151764667b7f288",
+      "quote": "17. Night: In this policy, night means the period between 22:00 and 06:00.",
+      "why": "night is the period between 22:00 and 06:00"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Legs of 285 and 265 minutes (none over 6 hours) add to 550 flying minutes, over 9 hours whether or not the hour in Cairo counts; the Cairo-Copenhagen flight is wholly inside the night. Eligible on every reading, the DG's exemption on file: EgyptAir business."
+}

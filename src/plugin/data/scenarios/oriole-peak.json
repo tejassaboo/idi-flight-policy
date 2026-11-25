@@ -1,0 +1,170 @@
+{
+  "id": "oriole-peak",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class please from Bogota to Madrid on March 22nd, the evening flight, for the joint OLACEFS-EUROSAI meeting. The DG signed my exemption. If the policy rules business out for this flight, book what it allows; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Camila Restrepo",
+    "traveller_title": "Senior Manager, Regional Cooperation",
+    "passenger": "STAFF_MEMBER",
+    "goes_to": "",
+    "based_in": "Bogota, Colombia",
+    "origin": "BOG",
+    "destination": "MAD",
+    "travel_date": "2027-03-22",
+    "booking_date": "2027-02-24",
+    "purpose": "Joint OLACEFS-EUROSAI meeting in Madrid",
+    "purpose_kind": "MEETING",
+    "engagement_starts": "2027-03-24 09:00",
+    "requested_cabin": "BUSINESS",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": false,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "PREMIUM_ECONOMY"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "BOG",
+        "destination": "MAD",
+        "date": "2027-03-22",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "avianca": {
+            "carrier": "AV",
+            "depart": "18:30",
+            "minutes": [
+              605
+            ]
+          },
+          "iberia": {
+            "carrier": "IB",
+            "depart": "20:00",
+            "minutes": [
+              610
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "avianca-economy",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 740000
+          },
+          {
+            "slot": "avianca-premium",
+            "flight": "avianca",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 1260000
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 3600000
+          },
+          {
+            "slot": "iberia-economy",
+            "flight": "iberia",
+            "cabin": "ECONOMY",
+            "fare_cents": 790000
+          },
+          {
+            "slot": "iberia-premium",
+            "flight": "iberia",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 1340000
+          },
+          {
+            "slot": "iberia-business",
+            "flight": "iberia",
+            "cabin": "BUSINESS",
+            "fare_cents": 3880000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "avianca-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "CABIN_EXEMPTION_AUTHORIZED",
+      "PREMIUM_ECONOMY_ALLOWED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "COMMERCIAL_AIR",
+      "COMMERCIAL_TRANSPORTATION",
+      "PRE_AUTHORISATION",
+      "TRANSPORT_AUTHORISATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    },
+    {
+      "lines": [
+        135,
+        136
+      ],
+      "sha256": "6e3e9c7fbabf20e12de000c9d8f0545e464138bfee835dde37af7d0704ebb65d",
+      "quote": "if there is an exceptional need for traveling on premium economy/business, the DG needs to be added for approval of all such travel.",
+      "why": "premium economy or business needs the DG's approval"
+    },
+    {
+      "lines": [
+        165,
+        166
+      ],
+      "sha256": "8180b5115f70cbe445d5d04f5119e63a212e49df08cb32d658b5cd02fb42670c",
+      "quote": "Exemptions will be authorized by IDI Director General for all IDI staff and by the Chair of the IDI Board for IDI Board members and IDI Director General.",
+      "why": "who authorises an exemption: the DG for staff, the Board Chair for Board members"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The overnight 605-minute flight meets the criteria, but the exemption the DG signed (lines 135-136, 165) is for premium economy, not business: business is not authorised, and premium economy is. The cheapest premium economy fare, Avianca."
+}

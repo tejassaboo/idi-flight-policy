@@ -1,0 +1,142 @@
+{
+  "id": "quartz-heath",
+  "category": "hidden_clause",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "umber-loch",
+  "twin_fact": "the staff member is in hospital after an accident on IDI travel (and her ADG authorised the trip), or simply at the workshop",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My wife, Achieng Otieno, was hurt in a road accident in Johannesburg while she was there for an IDI workshop, and she's in hospital and needs me with her. Her ADG has authorised my trip. Please book me economy Nairobi to Johannesburg tomorrow, March 9th.",
+  "trip": {
+    "traveller_name": "Daniel Otieno",
+    "traveller_title": "Husband of Achieng Otieno, Manager, Audit Quality",
+    "passenger": "FAMILY_MEMBER",
+    "goes_to": "Achieng Otieno",
+    "based_in": "Nairobi, Kenya",
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2027-03-09",
+    "booking_date": "2027-03-08",
+    "purpose": "To be with his wife in hospital after she was injured on IDI travel in Johannesburg",
+    "purpose_kind": "FAMILY",
+    "engagement_starts": "",
+    "requested_cabin": "ECONOMY",
+    "requested_connection": "",
+    "leave_attached": "NONE",
+    "usual_travel_date": "",
+    "medical_certificate_on_file": false,
+    "staff_ill_on_duty": true,
+    "exemption_pending": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_DIRECTOR_GENERAL",
+        "name": "Kari Nygaard",
+        "subject": "TRAVEL_AUTHORITY",
+        "cabin": "NONE"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2027-03-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "08:00",
+            "minutes": [
+              240
+            ]
+          },
+          "saa": {
+            "carrier": "SA",
+            "depart": "10:30",
+            "minutes": [
+              245
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 340000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 1480000
+          },
+          {
+            "slot": "saa-economy",
+            "flight": "saa",
+            "cabin": "ECONOMY",
+            "fare_cents": 360000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "NEXT_OF_KIN_TRAVEL"
+    ],
+    "approvers": [
+      "ASSISTANT_DIRECTOR_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "ILLNESS_ACCIDENT",
+      "SPECIAL_SITUATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        251,
+        253
+      ],
+      "sha256": "9be494fe66a7725ee219c83c6716c188f89241dedfe03ee3e35ce015dd7fc4e9",
+      "quote": "53. When a staff becomes ill or injured while on official duty and is in need of the presence of next of kin, actual and reasonable transportation and accommodation plus the daily composite allowance may be reimbursed.",
+      "why": "next of kin's transportation when a staff member is ill or injured on official duty"
+    },
+    {
+      "lines": [
+        131,
+        132
+      ],
+      "sha256": "f564e4d570d32fba7b21cafdd1417c7d777f1531ca175fc7a5b6ce48d5a7cf8d",
+      "quote": "All travel and travel arrangements shall be pre-authorised by the staff member's manager (ADG)",
+      "why": "every trip is pre-authorised by the manager (ADG) on a travel authority form"
+    },
+    {
+      "lines": [
+        156,
+        161
+      ],
+      "sha256": "8cef8aca1e615c55db0914b0883953951be176bf51f4cef71d8c446a5f1fedf8",
+      "quote": "27. The default option for IDI travel, is economy class. Travel on economy premium or business class may be authorized on an exceptional and individual basis, taking into account ticket prices coupled with employee wellbeing considerations. Such exemptions will only be considered for flights where: One leg of the journey lasts for more than 6 hours from the airport of departure or the total journey lasts for more than 9 hours, and where travel involves overnight flights (Flights between 2200 to 0600 hours). Additional criteria that need to",
+      "why": "economy by default; an exemption only where a leg is over 6 hours or the journey over 9 hours, and where travel involves overnight flights"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The policy covers staff and Board members (lines 57-58), but lines 251-253 cover actual and reasonable transportation for next of kin when a staff member is injured on official duty and needs them. The trip is authorised by her ADG. Economy at the lowest fare, Kenya Airways."
+}

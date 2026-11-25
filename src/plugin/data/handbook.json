@@ -1,0 +1,16 @@
+{
+  "id": "idi-flight-policy",
+  "name": "IDI Travel Policy Flight Booking",
+  "slug": "idi",
+  "title": "IDI Travel Policy (2025 edition), INTOSAI Development Initiative",
+  "frozen_file": "idi_policy.txt",
+  "sha256": "83d8d0e1d2d4c6a3b28de075258285e282ecb671a7c5febf5ed6bd6fa8abebe7",
+  "raw_pdf_sha256": "a0360242bc219fff20ffdecdc58e89e5a5806bfd96dd8e905e3d6649ab381e30",
+  "words": 3290,
+  "lines": 303,
+  "source": "not recorded locally (UNVERIFIED); the text names https://www.idi.no/our-resources/idi-administrative; the raw PDF pilot_work/originals/idi/raw_idi.pdf is the pinned copy",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "NOK",
+  "background_offers": 0
+}
