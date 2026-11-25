@@ -5,10 +5,10 @@
     "multi_leg"
   ],
   "twin_of": "juniper-moss",
-  "twin_fact": "the journey: 540 minutes door to door to Istanbul, or 550 flying minutes to Copenhagen; the DG's exemption is pending here and signed in the twin",
+  "twin_fact": "the journey: 540 minutes door to door to Istanbul, or 550 flying minutes to Copenhagen; the same signed exemption in both",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Nairobi to Istanbul on May 9th for the INTOSAI capacity building committee, on the EgyptAir evening connection through Cairo. Business please, I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the committee meeting.",
+  "request": "Nairobi to Istanbul on May 9th for the INTOSAI capacity building committee, on the EgyptAir evening connection through Cairo. Business please. The DG has signed my exemption for business, provided the flight qualifies under the policy. If the policy rules business out for this flight, book what it allows; I have to be at the committee meeting.",
   "trip": {
     "traveller_name": "Faith Njeri",
     "traveller_title": "Manager, Capacity Development",
@@ -28,13 +28,19 @@
     "usual_travel_date": "",
     "medical_certificate_on_file": false,
     "staff_ill_on_duty": false,
-    "exemption_pending": true,
+    "exemption_pending": false,
     "sign_offs": [
       {
         "role": "ASSISTANT_DIRECTOR_GENERAL",
         "name": "Kari Nygaard",
         "subject": "TRAVEL_AUTHORITY",
         "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
       }
     ]
   },
@@ -94,6 +100,7 @@
     ],
     "approvers": [
       "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
       "NONE"
     ],
     "clauses": [
@@ -123,5 +130,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Legs of 285 and 120 minutes with 135 minutes in Cairo: exactly 540 minutes from first departure to last arrival, and 405 in the air. 'More than 9 hours' is strict, so the journey is not over 9 hours on either reading, and no leg is over 6 hours: no exemption can be considered, though the flight is overnight. Economy, EgyptAir."
+  "design_notes": "Legs of 285 and 120 minutes with 135 minutes in Cairo: exactly 540 minutes from first departure to last arrival, and 405 in the air. 'More than 9 hours' is strict, so the journey is not over 9 hours on either reading, and no leg is over 6 hours: no exemption can be considered, though the flight is overnight, so the one signed subject to the flight qualifying does not apply. Economy, EgyptAir."
 }

@@ -149,6 +149,10 @@ UNCLEAR_REASONS = ["APPROVAL_REQUIRED", "UNCLEAR_POLICY_TEXT"]
 STAFF_BOOK = ["ASSISTANT_DIRECTOR_GENERAL", "NONE"]
 STAFF_EXEMPT_BOOK = ["ASSISTANT_DIRECTOR_GENERAL", "DIRECTOR_GENERAL", "NONE"]
 FALLBACK = "If the policy rules business out for this flight, book what it allows; I have to be at the {}."
+# The boundary twins carry the same signed exemption on both sides, so each pair differs in one fact (the flight).
+# The DG signed it subject to the flight qualifying, so the ineligible side has no "the DG signed, so business"
+# reading against "such exemptions will only be considered for flights where ..." (lines 159-161).
+SIGNED = "The DG has signed my exemption for business, provided the flight qualifies under the policy. "
 
 # ===== easy (5) =====
 
@@ -297,8 +301,8 @@ def mumbai_trip(name, title, **fields):
 
 scenario(
     "fennel-quay", "boundary_twin", ["dearer_option"],
-    "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th; the DG has signed my "
-    "exemption. " + FALLBACK.format("workshop"),
+    "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th. " + SIGNED
+    + FALLBACK.format("workshop"),
     mumbai_trip("Joseph Mwangi", "Manager, Bilateral Support", sign_offs=[adg("Kari Nygaard"), exemption()]),
     mumbai(361),
     expected("BOOK", ["kenya-business"], ["BUSINESS"], LONG_OK, STAFF_EXEMPT_BOOK, EXEMPT),
@@ -306,23 +310,21 @@ scenario(
     "The Kenya Airways nonstop is scheduled at 361 minutes, more than 6 hours (strict), leaving 22:30 and flying through "
     "the night on both clocks: the exemption criteria hold on every reading, and the DG's exemption is on file. Book "
     "Kenya Airways business (Air India sells no business on its 355-minute flight).",
-    twin_of="garnet-brook", twin_fact="Kenya Airways nonstop 361 or 360 minutes; the DG's exemption is signed here and "
-    "still pending in the twin")
+    twin_of="garnet-brook", twin_fact="Kenya Airways nonstop 361 or 360 minutes (the same signed exemption in both)")
 
 scenario(
     "garnet-brook", "boundary_twin", [],
-    "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th; I've sent my "
-    "exemption form to the DG. " + FALLBACK.format("workshop"),
-    mumbai_trip("Grace Achieng", "Manager, Bilateral Support", sign_offs=[adg("Kari Nygaard")],
-                exemption_pending=True),
+    "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th. " + SIGNED
+    + FALLBACK.format("workshop"),
+    mumbai_trip("Grace Achieng", "Manager, Bilateral Support", sign_offs=[adg("Kari Nygaard"), exemption()]),
     mumbai(360),
-    expected("BOOK", ["kenya-economy"], ["ECONOMY"], NOT_MET, STAFF_BOOK, AIR),
+    expected("BOOK", ["kenya-economy"], ["ECONOMY"], NOT_MET, STAFF_EXEMPT_BOOK, AIR),
     [CRITERIA, DIRECT],
     "At exactly 360 minutes no leg lasts more than 6 hours, and 360 minutes is no journey of more than 9 hours, so an "
-    "exemption cannot be considered on any reading of lines 159-161, even though one is pending: there is nothing for "
-    "the DG to decide, so no hold. Economy at the lowest fare, Kenya Airways.",
-    twin_of="fennel-quay", twin_fact="Kenya Airways nonstop 360 or 361 minutes; the DG's exemption is pending here and "
-    "signed in the twin")
+    "exemption cannot be considered on any reading of lines 159-161, and the DG's exemption, signed subject to the "
+    "flight qualifying, does not apply (it stays on file unused: DG accepted beside the ADG and NONE). Economy at the "
+    "lowest fare, Kenya Airways.",
+    twin_of="fennel-quay", twin_fact="Kenya Airways nonstop 360 or 361 minutes (the same signed exemption in both)")
 
 DOHA_NIGHT = {"carrier": "QR", "via": ["DOH"], "depart": "20:30", "minutes": [210, 360], "layovers": [75]}
 DOHA_DAY = {"carrier": "QR", "via": ["DOH"], "depart": "09:00", "minutes": [210, 360], "layovers": [75]}
@@ -339,7 +341,7 @@ def copenhagen_trip(name, **fields):
 scenario(
     "heather-cove", "boundary_twin", ["multi_leg", "dearer_option"],
     "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways evening departure via "
-    "Doha. Business please, the DG has signed my exemption. " + FALLBACK.format("conference"),
+    "Doha. Business please. " + SIGNED + FALLBACK.format("conference"),
     copenhagen_trip("Rohan Kapoor", sign_offs=[adg("Lars Eide"), exemption()]),
     [search("DEL", "CPH", "2027-04-11", {"qatar": DOHA_NIGHT}, DOHA_OFFERS)],
     expected("BOOK", ["qatar-business"], ["BUSINESS"], LONG_OK, STAFF_EXEMPT_BOOK, EXEMPT),
@@ -348,26 +350,27 @@ scenario(
     "over 9 hours on any reading, and the Doha-Copenhagen flight leaves 22:45 and flies through the night on both "
     "clocks. Both groupings of lines 159-161 hold, and the DG's exemption is on file: Qatar business.",
     twin_of="iris-shoal", twin_fact="Qatar Airways leaves Delhi 20:30 (Doha-Copenhagen overnight) or 09:00 (all "
-    "daytime); the DG's exemption is signed here and pending in the twin")
+    "daytime); the same signed exemption in both")
 
 scenario(
     "iris-shoal", "boundary_twin", ["multi_leg"],
     "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways morning departure via "
-    "Doha. Business please, I've sent my exemption form to the DG. " + FALLBACK.format("conference"),
-    copenhagen_trip("Meera Iyer", sign_offs=[adg("Lars Eide")], exemption_pending=True),
+    "Doha. Business please. " + SIGNED + FALLBACK.format("conference"),
+    copenhagen_trip("Meera Iyer", sign_offs=[adg("Lars Eide"), exemption()]),
     [search("DEL", "CPH", "2027-04-11", {"qatar": DOHA_DAY}, DOHA_OFFERS)],
-    expected("BOOK", ["qatar-economy"], ["ECONOMY"], NOT_MET, STAFF_BOOK, AIR),
+    expected("BOOK", ["qatar-economy"], ["ECONOMY"], NOT_MET, STAFF_EXEMPT_BOOK, AIR),
     [CRITERIA, NIGHT, DIRECT],
     "The same 570 flying minutes, but leaving Delhi 09:00 and landing in Copenhagen 15:15, both flights outside "
     "22:00-06:00 on every clock. No leg is over 6 hours, so neither grouping of lines 159-161 is met without an "
-    "overnight flight: no exemption can be considered, the pending one included. Economy, Qatar.",
-    twin_of="heather-cove", twin_fact="Qatar Airways leaves Delhi 09:00 (all daytime) or 20:30 (overnight); the DG's "
-    "exemption is pending here and signed in the twin")
+    "overnight flight: no exemption can be considered, and the one signed subject to the flight qualifying does not "
+    "apply. Economy, Qatar.",
+    twin_of="heather-cove", twin_fact="Qatar Airways leaves Delhi 09:00 (all daytime) or 20:30 (overnight); the same "
+    "signed exemption in both")
 
 scenario(
     "juniper-moss", "boundary_twin", ["multi_leg", "dearer_option"],
     "Nairobi to Copenhagen on May 9th for the INTOSAI capacity building committee, on the EgyptAir evening "
-    "connection through Cairo. Business please, the DG signed my exemption. " + FALLBACK.format("committee meeting"),
+    "connection through Cairo. Business please. " + SIGNED + FALLBACK.format("committee meeting"),
     trip(traveller_name="Peter Otieno", traveller_title="Manager, Capacity Development", based_in="Nairobi, Kenya",
          origin="NBO", destination="CPH", travel_date="2027-05-09", booking_date="2027-04-12",
          purpose="INTOSAI capacity building committee in Copenhagen", engagement_starts="2027-05-10 13:00",
@@ -380,28 +383,28 @@ scenario(
     "Legs of 285 and 265 minutes (none over 6 hours) add to 550 flying minutes, over 9 hours whether or not the hour in "
     "Cairo counts; the Cairo-Copenhagen flight is wholly inside the night. Eligible on every reading, the DG's "
     "exemption on file: EgyptAir business.",
-    twin_of="kelp-ridge", twin_fact="the journey: 550 flying minutes (620 door to door) to Copenhagen, or 540 minutes "
-    "door to door to Istanbul; the DG's exemption is signed here and pending in the twin")
+    twin_of="kelp-ridge", twin_fact="the journey: 550 flying minutes (610 door to door) to Copenhagen, or 540 minutes "
+    "door to door to Istanbul; the same signed exemption in both")
 
 scenario(
     "kelp-ridge", "boundary_twin", ["multi_leg"],
     "Nairobi to Istanbul on May 9th for the INTOSAI capacity building committee, on the EgyptAir evening "
-    "connection through Cairo. Business please, I've sent my exemption form to the DG. "
-    + FALLBACK.format("committee meeting"),
+    "connection through Cairo. Business please. " + SIGNED + FALLBACK.format("committee meeting"),
     trip(traveller_name="Faith Njeri", traveller_title="Manager, Capacity Development", based_in="Nairobi, Kenya",
          origin="NBO", destination="IST", travel_date="2027-05-09", booking_date="2027-04-12",
          purpose="INTOSAI capacity building committee in Istanbul", engagement_starts="2027-05-10 13:00",
-         requested_cabin="BUSINESS", exemption_pending=True, sign_offs=[adg("Kari Nygaard")]),
+         requested_cabin="BUSINESS", sign_offs=[adg("Kari Nygaard"), exemption()]),
     [search("NBO", "IST", "2027-05-09", {
         "egyptair": {"carrier": "MS", "via": ["CAI"], "depart": "20:00", "minutes": [285, 120], "layovers": [135]},
     }, [offer("egyptair-economy", "egyptair", "ECONOMY", 4800), offer("egyptair-business", "egyptair", "BUSINESS", 22000)])],
-    expected("BOOK", ["egyptair-economy"], ["ECONOMY"], NOT_MET, STAFF_BOOK, AIR),
+    expected("BOOK", ["egyptair-economy"], ["ECONOMY"], NOT_MET, STAFF_EXEMPT_BOOK, AIR),
     [CRITERIA, DIRECT],
     "Legs of 285 and 120 minutes with 135 minutes in Cairo: exactly 540 minutes from first departure to last arrival, "
     "and 405 in the air. 'More than 9 hours' is strict, so the journey is not over 9 hours on either reading, and no "
-    "leg is over 6 hours: no exemption can be considered, though the flight is overnight. Economy, EgyptAir.",
+    "leg is over 6 hours: no exemption can be considered, though the flight is overnight, so the one signed subject to "
+    "the flight qualifying does not apply. Economy, EgyptAir.",
     twin_of="juniper-moss", twin_fact="the journey: 540 minutes door to door to Istanbul, or 550 flying minutes to "
-    "Copenhagen; the DG's exemption is pending here and signed in the twin")
+    "Copenhagen; the same signed exemption in both")
 
 # ===== multi-rule (4) =====
 
@@ -753,7 +756,8 @@ scenario(
     "The Kenya Airways nonstop is 361 minutes, over 6 hours, and overnight on both clocks: an exemption may be "
     "considered (lines 159-161), but only the DG may authorise it for staff (lines 135-136, 165), and the application "
     "is still pending. Hold the business fare for the DG; approval required, not 'no compliant offer'. Same flights as "
-    "fennel-quay (signed) and one minute longer than garnet-brook (pending, 360 minutes: economy).",
+    "fennel-quay (signed: business), with the application still pending, and one minute longer than garnet-brook "
+    "(360 minutes: economy whatever is signed).",
     flag_twins=["fennel-quay", "garnet-brook"],
     ambiguity="none: an approval is required and missing; the text is clear")
 

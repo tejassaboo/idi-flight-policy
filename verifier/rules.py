@@ -356,14 +356,14 @@ def premium(trip, seated, offers):
                       f"flights. Here the words '{phrase}' decide it and read two ways, so the handbook leaves open "
                       "whether the Director General may grant the pending exemption at all. Hold it.", phrase=phrase)
     if not verdict:
-        if granted:
-            raise ValueError("an exemption granted on a flight outside the criteria is not modelled")
+        # An exemption on file here was signed subject to the flight qualifying (the request says so, in both
+        # twins), so it does not apply: "such exemptions will only be considered for flights where ...".
         return answer(Decision.BOOK, lowest_economy(seated),
                       [ReasonCode.UPGRADE_NOT_ELIGIBLE, ReasonCode.LONG_FLIGHT_CONDITION_NOT_MET], on_file(trip),
                       AIR_CLAUSES,
                       "Lines 156-161: no leg is more than 6 hours and the journey is not more than 9 hours with an "
-                      "overnight flight on every reading, so no exemption can be considered, even one applied for. "
-                      "Economy, the default, at the lowest fare (line 155).")
+                      "overnight flight on every reading, so no exemption can be considered, and one signed subject to "
+                      "the flight qualifying does not apply. Economy, the default, at the lowest fare (line 155).")
     if not granted:
         giver = exemption_giver(trip)
         return answer(Decision.FLAG_FOR_APPROVAL, asked, [ReasonCode.APPROVAL_REQUIRED], [giver], EXEMPTION_CLAUSES,

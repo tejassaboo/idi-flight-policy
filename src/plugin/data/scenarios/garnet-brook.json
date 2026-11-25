@@ -3,10 +3,10 @@
   "category": "boundary_twin",
   "overlays": [],
   "twin_of": "fennel-quay",
-  "twin_fact": "Kenya Airways nonstop 360 or 361 minutes; the DG's exemption is pending here and signed in the twin",
+  "twin_fact": "Kenya Airways nonstop 360 or 361 minutes (the same signed exemption in both)",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th; I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the workshop.",
+  "request": "Business class please on the Kenya Airways 22:30 flight from Nairobi to Mumbai on March 7th. The DG has signed my exemption for business, provided the flight qualifies under the policy. If the policy rules business out for this flight, book what it allows; I have to be at the workshop.",
   "trip": {
     "traveller_name": "Grace Achieng",
     "traveller_title": "Manager, Bilateral Support",
@@ -26,13 +26,19 @@
     "usual_travel_date": "",
     "medical_certificate_on_file": false,
     "staff_ill_on_duty": false,
-    "exemption_pending": true,
+    "exemption_pending": false,
     "sign_offs": [
       {
         "role": "ASSISTANT_DIRECTOR_GENERAL",
         "name": "Kari Nygaard",
         "subject": "TRAVEL_AUTHORITY",
         "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
       }
     ]
   },
@@ -98,6 +104,7 @@
     ],
     "approvers": [
       "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
       "NONE"
     ],
     "clauses": [
@@ -127,5 +134,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "At exactly 360 minutes no leg lasts more than 6 hours, and 360 minutes is no journey of more than 9 hours, so an exemption cannot be considered on any reading of lines 159-161, even though one is pending: there is nothing for the DG to decide, so no hold. Economy at the lowest fare, Kenya Airways."
+  "design_notes": "At exactly 360 minutes no leg lasts more than 6 hours, and 360 minutes is no journey of more than 9 hours, so an exemption cannot be considered on any reading of lines 159-161, and the DG's exemption, signed subject to the flight qualifying, does not apply (it stays on file unused: DG accepted beside the ADG and NONE). Economy at the lowest fare, Kenya Airways."
 }

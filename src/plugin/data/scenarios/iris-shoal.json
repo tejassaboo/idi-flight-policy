@@ -5,10 +5,10 @@
     "multi_leg"
   ],
   "twin_of": "heather-cove",
-  "twin_fact": "Qatar Airways leaves Delhi 09:00 (all daytime) or 20:30 (overnight); the DG's exemption is pending here and signed in the twin",
+  "twin_fact": "Qatar Airways leaves Delhi 09:00 (all daytime) or 20:30 (overnight); the same signed exemption in both",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways morning departure via Doha. Business please, I've sent my exemption form to the DG. If the policy rules business out for this flight, book what it allows; I have to be at the conference.",
+  "request": "Delhi to Copenhagen on April 11th for the partnership conference, on the Qatar Airways morning departure via Doha. Business please. The DG has signed my exemption for business, provided the flight qualifies under the policy. If the policy rules business out for this flight, book what it allows; I have to be at the conference.",
   "trip": {
     "traveller_name": "Meera Iyer",
     "traveller_title": "Senior Manager, SAI Governance",
@@ -28,13 +28,19 @@
     "usual_travel_date": "",
     "medical_certificate_on_file": false,
     "staff_ill_on_duty": false,
-    "exemption_pending": true,
+    "exemption_pending": false,
     "sign_offs": [
       {
         "role": "ASSISTANT_DIRECTOR_GENERAL",
         "name": "Lars Eide",
         "subject": "TRAVEL_AUTHORITY",
         "cabin": "NONE"
+      },
+      {
+        "role": "DIRECTOR_GENERAL",
+        "name": "Marit Aasen",
+        "subject": "CABIN_EXEMPTION",
+        "cabin": "BUSINESS"
       }
     ]
   },
@@ -94,6 +100,7 @@
     ],
     "approvers": [
       "ASSISTANT_DIRECTOR_GENERAL",
+      "DIRECTOR_GENERAL",
       "NONE"
     ],
     "clauses": [
@@ -132,5 +139,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "The same 570 flying minutes, but leaving Delhi 09:00 and landing in Copenhagen 15:15, both flights outside 22:00-06:00 on every clock. No leg is over 6 hours, so neither grouping of lines 159-161 is met without an overnight flight: no exemption can be considered, the pending one included. Economy, Qatar."
+  "design_notes": "The same 570 flying minutes, but leaving Delhi 09:00 and landing in Copenhagen 15:15, both flights outside 22:00-06:00 on every clock. No leg is over 6 hours, so neither grouping of lines 159-161 is met without an overnight flight: no exemption can be considered, and the one signed subject to the flight qualifying does not apply. Economy, Qatar."
 }

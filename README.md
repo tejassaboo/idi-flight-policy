@@ -55,7 +55,7 @@ searches. `larch-mere` pins a second search (the usual travel date its record na
 | `dune-sorrel` | easy | BOOK (airindia-economy; ECONOMY) | 155, 156-161 |
 | `ember-kestrel` | easy | BOOK (airindia-premium; PREMIUM_ECONOMY) | 135-136, 156-161, 165-166 |
 | `fennel-quay` | boundary_twin | BOOK (kenya-business; BUSINESS), 361 minutes, exemption signed | 115, 135-136, 156-161, 165-166 |
-| `garnet-brook` | boundary_twin | BOOK (kenya-economy; ECONOMY), 360 minutes, exemption pending | 155, 156-161 |
+| `garnet-brook` | boundary_twin | BOOK (kenya-economy; ECONOMY), 360 minutes, the same signed exemption | 155, 156-161 |
 | `heather-cove` | boundary_twin | BOOK (qatar-business; BUSINESS), 570 flying minutes, overnight | 115, 135-136, 156-161, 165-166 |
 | `iris-shoal` | boundary_twin | BOOK (qatar-economy; ECONOMY), the same by day | 115, 155, 156-161 |
 | `juniper-moss` | boundary_twin | BOOK (egyptair-business; BUSINESS), 550 flying minutes | 115, 135-136, 156-161, 165-166 |

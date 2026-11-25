@@ -151,5 +151,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "The Kenya Airways nonstop is 361 minutes, over 6 hours, and overnight on both clocks: an exemption may be considered (lines 159-161), but only the DG may authorise it for staff (lines 135-136, 165), and the application is still pending. Hold the business fare for the DG; approval required, not 'no compliant offer'. Same flights as fennel-quay (signed) and one minute longer than garnet-brook (pending, 360 minutes: economy)."
+  "design_notes": "The Kenya Airways nonstop is 361 minutes, over 6 hours, and overnight on both clocks: an exemption may be considered (lines 159-161), but only the DG may authorise it for staff (lines 135-136, 165), and the application is still pending. Hold the business fare for the DG; approval required, not 'no compliant offer'. Same flights as fennel-quay (signed: business), with the application still pending, and one minute longer than garnet-brook (360 minutes: economy whatever is signed)."
 }
