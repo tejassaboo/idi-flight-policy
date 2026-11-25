@@ -530,8 +530,8 @@ scenario(
 
 scenario(
     "plover-glen", "hidden_clause", ["dearer_option"],
-    "I'm flying Mexico City to Madrid on April 20th for the IDI Board meeting. Business class please on the evening "
-    "flight; Elena Ruiz-Calderon signed my exemption.",
+    "I'm flying Mexico City to Madrid on April 20th for the IDI Board meeting. Business class please on one of the "
+    "evening flights; Elena Ruiz-Calderon signed my exemption.",
     trip(traveller_name="Alejandro Vega", traveller_title="Member of the IDI Board; Auditor General",
          passenger="BOARD_MEMBER", based_in="Mexico City, Mexico", origin="MEX", destination="MAD",
          travel_date="2027-04-20", booking_date="2027-03-24", purpose="IDI Board meeting in Madrid",

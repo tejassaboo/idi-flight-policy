@@ -24,9 +24,11 @@ billed per run, 4.0 calls per run, 8,164 prompt tokens per call.
    `tests/build_scenarios.py`). Only aspen-fjord has an exemption on file with an economy request.
 2. **ember-kestrel (scenario):** the request now reads "on one of the early-morning departures". Same flights, fares,
    key and id.
-3. **birch-lagoon and oriole-peak (latent, same defect):** "the late-evening departure" (23:30 and 23:55) and "the
-   evening flight" (18:30 and 20:00) also named one flight where the world has two qualifying ones. They now read "on
-   one of the late-evening departures" and "on one of the evening flights". Both passed this run.
+3. **birch-lagoon, oriole-peak and plover-glen (latent, same defect):** "the late-evening departure" (23:30 and
+   23:55) and "the evening flight" (18:30 and 20:00; 17:30 and 18:45) also named one flight where the world has two
+   qualifying ones. They now read "on one of the late-evening departures" and "on one of the evening flights". All
+   three passed this run; in each the key is the cheaper flight, which is also the earlier one. plover-glen's
+   change is a follow-up commit, found by scanning every request of the wave for "the <time> flight/departure".
 
 Not loosened: violet-crag.
 
@@ -41,7 +43,8 @@ count is unchanged: **4/24 (17%)** (`MAX_PASS_ALWAYS_LOWEST = 4`).
 
 ## Re-run
 
-Required (request changed): ember-kestrel (easy; must come back valid), birch-lagoon (easy), oriole-peak.
+Required (request changed): ember-kestrel (easy; must come back valid), birch-lagoon (easy), oriole-peak,
+plover-glen.
 
 ## Checks
 
